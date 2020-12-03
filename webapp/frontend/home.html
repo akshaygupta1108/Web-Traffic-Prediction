@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="index.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Website Traffic Prediction">
+	  <meta name="keywords" content="Wikipedia , Traffic , Prediction">
+    <meta name="author" content="Srikar Anand, Akshay Gupta">
+    <title>NetPred | Welcome</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div id="branding">
+          <h1><span class="highlight"> IIIT </span> ALLAHABAD </h1>
+          <h2> Wikipedia Article Network Traffic Prediction</h2>
+        </div>
+        <nav>
+          <ul>   
+            <img src  ="img/iiit.png" style="width : 40%; height:40%; "></img>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="newsletter">
+      <div class="container">
+        
+        <form>
+          <select name="Language" id="languageSelect" style="height :38px;">
+            <option value="en">English</option>
+            <option value="es">Spanish</option>
+            <option value="fr">French</option>
+            <option value="zh">Chinese</option>
+            <option value="de">German</option>
+          </select>
+          <select name="Access_Agent" id="accessSelect" style="height :38px;">
+            <option value="all-access">All-access</option>
+            <option value="desktop">Desktop</option>
+            <option value="mobile-app">Mobile-App</option>
+            <option value="mobile-web">Mobile-Web</option>
+            
+          </select>
+          <input type="text" placeholder="Article..." id="searchField">
+          <button type="button" class="button_1" onclick="submitSearch()">Search</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="main">
+       <div class="container">
+        <article id="main-col">
+        </br>
+          <ul>
+            <h3>Change the Model to </h3>
+            <button type="submit" class="button_1" onclick = "changeModelToLSTM()"> LSTM </button>
+            <button type="submit" class="button_1" onclick="changeModelToARIMA()"> ARIMA </button>
+            <button type="submit" class="button_1" onclick="changeModelToCNN()"> CNN </button>
+            </br>
+          </ul>   
+        </br>
+        <h1 class="page-title"> Prediction for the Page is </h1>
+        <a href="https://www.google.com" id="predictionLink">Click Here</a>
+          <ul id="services">
+            <li>
+              <h3 id="model_selected_text">Model Selected: </h3>
+              <h3 id="accuracy_text">The Loss(RMSE) of the selected model is: </h3>
+              <p></p>
+              <p><strong></strong></p>
+                
+                  <h3> The Prediction graph for the selected model is: </h3>
+                
+
+                  <img src  ="img/graph.png" id="graph_image"></img>
+                  
+                
+                <ul>   
+                  <button type="submit" class="button_1" onclick = "changeModelToNextDay()">Next Day </button>
+                  <button type="submit" class="button_1" onclick = "changeModelToNextWeek()">Next Week</button>
+                  <button type="submit" class="button_1" onclick = "changeModelToNextMonth()">Next Month</button>
+                </ul>
+              
+            </li>
+            
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <footer>
+      <p>A part of Seventh Semester Project under the guidance of Dr. Pavan Chakraborty . &copy; Srikar Anand and Akshay Gupta  </p>
+    </footer>
+  </body>
+</html>
